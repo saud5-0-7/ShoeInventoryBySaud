@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LoginFragment">
+    tools:context=".LoginFragment"
+    android:orientation="horizontal">
 
     <EditText
         android:id="@+id/Email"
@@ -20,8 +21,8 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@id/Email"
+      />
 
    <EditText
        android:id="@+id/password"
@@ -36,6 +37,6 @@
        app:layout_constraintEnd_toEndOf="@id/password"
        app:layout_constraintStart_toStartOf="@id/password"
        app:layout_constraintTop_toBottomOf="@id/password"
-       android:autofillHints=""/>
+        />
 
-</FrameLayout>
+</layout>
