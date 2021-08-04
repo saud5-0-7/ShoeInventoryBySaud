@@ -5,4 +5,6 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="registration">Registration</string>
+    <string name="welcome_header">Welcom</string>
+    <string name="welcom_to_shoe_store_inventory">Welcom To Shoe Store Inventory</string>
 </resources>
