@@ -19,7 +19,34 @@
         android:id="@+id/welcomFragment"
         android:name="com.example.shoeinventorybysaud.WelcomeFragment"
         android:label="fragment_welcom"
-        tools:layout="@layout/fragment_welcom" />
+        tools:layout="@layout/fragment_welcom" >
+        <action
+            android:id="@+id/action_welcomFragment_to_instrucctionFragment"
+            app:destination="@id/instrucctionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instrucctionFragment"
+        android:name="com.example.shoeinventorybysaud.InstructionFragment"
+        android:label="fragment_instrucction"
+        tools:layout="@layout/fragment_instrucction" >
+        <action
+            android:id="@+id/action_instrucctionFragment_to_shoesList"
+            app:destination="@id/shoesList" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoesList"
+        android:name="com.example.shoeinventorybysaud.ShoesList"
+        android:label="fragment_shoes_list"
+        tools:layout="@layout/fragment_shoes_list" >
+        <action
+            android:id="@+id/action_shoesList_to_shoseDetailFragment"
+            app:destination="@id/shoseDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoseDetailFragment"
+        android:name="com.example.shoeinventorybysaud.ShoseDetailFragment"
+        android:label="fragment_shose_detail"
+        tools:layout="@layout/fragment_shose_detail" />
 
 
 </navigation>

@@ -7,4 +7,12 @@
     <string name="registration">Registration</string>
     <string name="welcome_header">Welcom</string>
     <string name="welcom_to_shoe_store_inventory">Welcom To Shoe Store Inventory</string>
+    <string name="welcome_body">welcom</string>
+    <string name="next_button">Button-welcom</string>
+    <string name="step_two">-In the second step, click on the Save button to save the type of shoe you want to take inventory</string>
+    <string name="step_one">-In the first step, choose the type of shoe you want to take inventory by pressing add</string>
+    <string name="instructions_page">Welcome to the instructions page</string>
+    <string name="to_the_shoe_list">to the shoe list</string>
+    <string name="add_shoe">add-shoe</string>
+    <string name="submit">add shoes</string>
 </resources>
