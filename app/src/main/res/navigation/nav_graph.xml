@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.shoeinventorybysaud.LoginFragment"
+        android:name="com.example.shoeinventorybysaud.screen.welcom.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/instrucctionFragment"
-        android:name="com.example.shoeinventorybysaud.InstructionFragment"
+        android:name="com.example.shoeinventorybysaud.screen.welcom.instruction.InstructionFragment"
         android:label="fragment_instrucction"
         tools:layout="@layout/fragment_instrucction" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/shoesList"
-        android:name="com.example.shoeinventorybysaud.ShoesList"
+        android:name="com.example.shoeinventorybysaud.screen.welcom.shoheslist.ShoesList"
         android:label="fragment_shoes_list"
         tools:layout="@layout/fragment_shoes_list" >
         <action

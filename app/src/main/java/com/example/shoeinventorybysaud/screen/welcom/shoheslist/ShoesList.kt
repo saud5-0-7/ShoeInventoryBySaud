@@ -1,4 +1,4 @@
-package com.example.shoeinventorybysaud
+package com.example.shoeinventorybysaud.screen.welcom.shoheslist
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,14 +22,8 @@ class ShoesList : Fragment() {
     }
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val fab = view.findViewById(R.id.fab) as Button
 
-        fab.setOnClickListener {
-            findNavController().navigate(R.id.action_shoesList_to_shoseDetailFragment)
 
-        }
-    }
 }
 
 
