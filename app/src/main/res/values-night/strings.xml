@@ -12,4 +12,12 @@
     <string name="to_the_shoe_list">to the shoe list</string>
     <string name="add_shoe">add-shoe</string>
     <string name="submit">add shoes</string>
+    <string name="shoe_details_header">shoe_details_header</string>
+    <string name="shoe_name">shoe_name</string>
+    <string name="company_name">company_name</string>
+    <string name="enter_company_name">/enter_company_name</string>
+    <string name="enter_shoe_size">enter_shoe_size</string>
+    <string name="description">description</string>
+    <string name="save">save</string>
+    <string name="cancel">cancel</string>
 </resources>

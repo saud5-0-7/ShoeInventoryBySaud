@@ -21,6 +21,15 @@ class ShoesList : Fragment() {
         return inflater.inflate(R.layout.fragment_shoes_list, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val fab =view.findViewById(R.id.fab) as Button
+
+        fab.setOnClickListener {
+            findNavController().navigate(R.id.action_shoesList_to_shoseDetailFragment)
+        }
+    }
+
+
 
 
 

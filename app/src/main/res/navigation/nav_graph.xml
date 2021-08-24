@@ -46,7 +46,11 @@
         android:id="@+id/shoseDetailFragment"
         android:name="com.example.shoeinventorybysaud.ShoseDetailFragment"
         android:label="fragment_shose_detail"
-        tools:layout="@layout/fragment_shose_detail" />
+        tools:layout="@layout/fragment_shose_detail" >
+        <action
+            android:id="@+id/action_shoseDetailFragment_to_shoesList"
+            app:destination="@id/shoesList" />
+    </fragment>
 
 
 </navigation>
