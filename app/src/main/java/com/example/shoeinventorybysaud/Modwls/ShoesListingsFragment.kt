@@ -16,7 +16,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ShoesListingsFragment : Fragment() {
 
-    private lateinit var binding: ShoesListingsFragment
 
 
     override fun onCreateView(
@@ -24,8 +23,7 @@ class ShoesListingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding= DataBindingUtil.inflate(inflater, R.layout.fragment_shoes_listings, container, false)
-        setHasOptionsMenu(true)
+
 
         return inflater.inflate(R.layout.fragment_shoes_listings,container,false)
     }
@@ -44,24 +42,14 @@ class ShoesListingsFragment : Fragment() {
 }
 
 
-    return binding.root
-
-}
-
-     fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-      super.onCreateOptionsMenu(menu, inflater)
-      inflater?.inflate(R.menu.login,menu)
-
-}
-
-     fun onOptionsItemSelected(item: MenuItem): Boolean {
-     return NavigationUI.onNavDestinationSelected(item!!,view!!.findNavController())||super.onOptionsItemSelected(item)
-}
 
 
 
 
-}
+
+
+
+
 
 
 
