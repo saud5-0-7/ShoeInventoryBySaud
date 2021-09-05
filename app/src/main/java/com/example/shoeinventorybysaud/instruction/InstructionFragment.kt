@@ -1,4 +1,4 @@
-package com.example.shoeinventorybysaud.screen.welcom.shoheslist
+package com.example.shoeinventorybysaud.instruction
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,7 +10,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.shoeinventorybysaud.R
 
 
-class ShoesList : Fragment() {
+class InstructionFragment : Fragment() {
+
 
 
     override fun onCreateView(
@@ -18,27 +19,16 @@ class ShoesList : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shoes_list, container, false)
+        return inflater.inflate(R.layout.fragment_instrucction, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val fab =view.findViewById(R.id.fab) as Button
+        val Instruction_button = view.findViewById(R.id.Instruction_button) as Button
 
-        fab.setOnClickListener {
-            findNavController().navigate(R.id.action_shoesList_to_shoseDetailFragment)
+        Instruction_button.setOnClickListener {
+           findNavController().navigate(R.id.action_instrucctionFragment_to_shoesListingsFragment)
         }
     }
 
 
-
-
-
 }
-
-
-
-
-
-
-
-

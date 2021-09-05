@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.shoeinventorybysaud.screen.welcom.login.LoginFragment"
+        android:name="com.example.shoeinventorybysaud.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -26,30 +26,29 @@
     </fragment>
     <fragment
         android:id="@+id/instrucctionFragment"
-        android:name="com.example.shoeinventorybysaud.screen.welcom.instruction.InstructionFragment"
+        android:name="com.example.shoeinventorybysaud.instruction.InstructionFragment"
         android:label="fragment_instrucction"
         tools:layout="@layout/fragment_instrucction" >
         <action
-            android:id="@+id/action_instrucctionFragment_to_shoesList"
-            app:destination="@id/shoesList" />
-    </fragment>
-    <fragment
-        android:id="@+id/shoesList"
-        android:name="com.example.shoeinventorybysaud.screen.welcom.shoheslist.ShoesList"
-        android:label="fragment_shoes_list"
-        tools:layout="@layout/fragment_shoes_list" >
-        <action
-            android:id="@+id/action_shoesList_to_shoseDetailFragment"
-            app:destination="@id/shoseDetailFragment" />
+            android:id="@+id/action_instrucctionFragment_to_shoesListingsFragment"
+            app:destination="@id/shoesListingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoseDetailFragment"
-        android:name="com.example.shoeinventorybysaud.ShoseDetailFragment"
+        android:name="com.example.shoeinventorybysaud.Modwls.ShoseDetailFragment"
         android:label="fragment_shose_detail"
         tools:layout="@layout/fragment_shose_detail" >
         <action
-            android:id="@+id/action_shoseDetailFragment_to_shoesList"
-            app:destination="@id/shoesList" />
+            android:id="@+id/action_shoseDetailFragment_to_shoesListingsFragment"
+            app:destination="@id/shoesListingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoesListingsFragment"
+        android:name="com.example.shoeinventorybysaud.Modwls.ShoesListingsFragment"
+        android:label="ShoesListingsFragment" >
+        <action
+            android:id="@+id/action_shoesListingsFragment_to_shoseDetailFragment"
+            app:destination="@id/shoseDetailFragment" />
     </fragment>
 
 

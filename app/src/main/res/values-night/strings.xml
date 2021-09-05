@@ -20,4 +20,9 @@
     <string name="description">description</string>
     <string name="save">save</string>
     <string name="cancel">cancel</string>
+    <string name="description_hint">description_hint</string>
+    <string name="shoe_size_hint">shoe_size_hint</string>
+    <string name="company_name_hint">company_hint</string>
+    <string name="logout_menu_item">logout_menu_item</string>
+    <string name="logout">logout</string>
 </resources>

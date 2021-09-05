@@ -1,4 +1,4 @@
-package com.example.shoeinventorybysaud.screen.welcom.shosedetail
+package com.example.shoeinventorybysaud.Modwls
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

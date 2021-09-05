@@ -2,6 +2,9 @@ package com.example.shoeinventorybysaud
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -14,9 +17,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(findNavController(R.id.nav_host))
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host)
-        return navController.navigateUp() || super.onSupportNavigateUp()
-    }
+
 
 }
