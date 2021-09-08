@@ -25,4 +25,5 @@
     <string name="company_name_hint">company_hint</string>
     <string name="logout_menu_item">logout_menu_item</string>
     <string name="logout">logout</string>
+    <string name="Logout">Logout</string>
 </resources>

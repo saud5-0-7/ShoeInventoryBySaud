@@ -3,6 +3,7 @@ package com.example.shoeinventorybysaud.Modwls
 import android.os.Bundle
 import android.view.*
 import android.widget.Button
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -29,20 +30,30 @@ class ShoesListingsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val fab = view.findViewById(R.id.fab) as Button
+        val fab = view.findViewById(R.id.fab) as FloatingActionButton
 
         fab.setOnClickListener {
-            findNavController().navigate(R.id.action_instrucctionFragment_to_shoesListingsFragment)
+            findNavController().navigate(R.id.action_shoesListingsFragment_to_shoseDetailFragment)
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.logout, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.loginFragment -> {
+                Toast.makeText(activity, "Logout", Toast.LENGTH_LONG).show()
+               return true
 
 
-
-}
-
+            }
 
 
+        }
 
 
 

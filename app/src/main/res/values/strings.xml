@@ -34,4 +34,5 @@
     <string name="shoe_name_hint">shoe_name_hint</string>
     <string name="logout_menu_item">logout_menu_item</string>
     <string name="logout">logout</string>
+    <string name="Logout">Logout</string>
 </resources>
