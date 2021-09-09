@@ -37,23 +37,35 @@ class ShoesListingsFragment : Fragment() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.logout, menu)
-        return true
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+    inflater.inflate(R.menu.logout, menu)
+}
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.loginFragment -> {
-                Toast.makeText(activity, "Logout", Toast.LENGTH_LONG).show()
-               return true
-
-
-            }
+    return when (item.itemId) {
+        R.id.loginFragment -> {
+            // navigate to settings screen
+            true
 
 
         }
+        else -> onOptionsItemSelected(item)
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
