@@ -50,7 +50,7 @@ class ShoesListingsFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
     return when (item.itemId) {
         R.id.loginFragment -> {
-            // navigate to settings screen
+
             true
 
 
