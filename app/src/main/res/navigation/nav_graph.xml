@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_shoesListingsFragment_to_shoseDetailFragment"
             app:destination="@id/shoseDetailFragment" />
+        <action
+            android:id="@+id/action_shoesListingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 
 

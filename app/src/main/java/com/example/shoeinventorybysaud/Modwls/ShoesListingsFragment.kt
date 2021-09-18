@@ -51,8 +51,9 @@ class ShoesListingsFragment : Fragment() {
         return when (item.itemId) {
             R.id.loginFragment-> {
 
-                true
+                findNavController().navigate(R.id.action_shoesListingsFragment_to_loginFragment)
 
+                true
 
             }
             else -> onOptionsItemSelected(item)
