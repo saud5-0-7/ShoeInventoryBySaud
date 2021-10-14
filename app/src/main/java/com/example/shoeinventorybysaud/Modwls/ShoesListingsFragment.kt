@@ -3,6 +3,7 @@ package com.example.shoeinventorybysaud.Modwls
 import android.os.Bundle
 import android.view.*
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -40,6 +41,17 @@ class ShoesListingsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+
+        val iterator = it.listIterator()
+        for (item in iterator) {
+            val _name = TextView(this.context)
+            _name.text = item.name
+            val _size = TextView(this.context)
+            _size.text = item.size
+            val _company = TextView(this.context)
+            _company.text = item.company
+            val _description = TextView(this.context)
+            _description.text = item.description
     }
 
 
@@ -49,14 +61,14 @@ class ShoesListingsFragment : Fragment() {
 }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.loginFragment-> {
+            R.id.logout-> {
 
                 findNavController().navigate(R.id.action_shoesListingsFragment_to_loginFragment)
 
                 true
 
             }
-            else -> onOptionsItemSelected(item)
+            else ->super.onOptionsItemSelected(item)
         }
     }
 }
