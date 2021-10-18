@@ -5,14 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.EditText
 import androidx.navigation.fragment.findNavController
 import com.example.shoeinventorybysaud.R
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
-class ShoseDetailFragment : Fragment() {
+class ShoseDetailFragment(name: String) : Fragment() {
 
     private lateinit var binding: ShoseDetailFragment
 
@@ -58,4 +56,5 @@ class ShoseDetailFragment : Fragment() {
         return binding.root
 
     }
+
 }
