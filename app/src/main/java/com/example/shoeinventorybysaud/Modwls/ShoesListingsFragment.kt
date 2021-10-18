@@ -52,26 +52,27 @@ class ShoesListingsFragment : Fragment() {
             _company.text = item.company
             val _description = TextView(this.context)
             _description.text = item.description
+        }
+
     }
 
+        override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+            inflater.inflate(R.menu.main_menu, menu)
+        }
 
+        override fun onOptionsItemSelected(item: MenuItem): Boolean {
+            return when (item.itemId) {
+                R.id.logout -> {
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-    inflater.inflate(R.menu.main_menu, menu)
-}
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.logout-> {
+                    findNavController().navigate(R.id.action_shoesListingsFragment_to_loginFragment)
 
-                findNavController().navigate(R.id.action_shoesListingsFragment_to_loginFragment)
+                    true
 
-                true
-
+                }
+                else -> super.onOptionsItemSelected(item)
             }
-            else ->super.onOptionsItemSelected(item)
         }
     }
-}
 
 
 
