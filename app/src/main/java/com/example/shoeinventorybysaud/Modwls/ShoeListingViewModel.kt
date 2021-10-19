@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 
-class shoeListingViewModel : ViewModel(){
+class shoeListingViewModel : ViewModel() {
 
 
     val shoeList = MutableLiveData<MutableList<Shoe>>()
@@ -13,15 +13,22 @@ class shoeListingViewModel : ViewModel(){
         shoeList.value = ArrayList()
     }
 
+    fun addShoe(name: String, size: String, company: String, description: String) {
+        var shoe: Shoe = Shoe(name, size, company, description)
+        shoeList.value?.add(shoe)
+        shoeList.value = shoeList.value
 
 
-    data class Shoe(
-        var name: String = "",
-        var size: String = "",
-        var company: Double = 0.0,
-        var description: String = ""
-    )
     }
+
+    fun addDummyData(){
+        addShoe("", "9", "Adidas", "Great shoes")
+        addShoe("Pumaaaaaaaa", "9", "Adidas", "Great shoes")
+
+    }
+
+
+}
 
 
 

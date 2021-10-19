@@ -46,6 +46,7 @@ class ShoesListingsFragment : Fragment() {
                 _company.text = item.company.toString()
                 val _description = TextView(this.context)
                 _description.text = item.description
+
             }
 
         })

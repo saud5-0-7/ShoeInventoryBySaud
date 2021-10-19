@@ -34,10 +34,10 @@ class ShoseDetailFragment(name: String) : Fragment() {
         val description = view.findViewById(R.id.description) as EditText
 
         binding.saveButton.setOnClickListener {
-            val shoe_name = shoe_name.text.toString()
-            val company_name = company_name.text.toString()
-            val shoe_size = shoe_size.text.toString()
-            val description = description.text.toString()
+            shoe_name.text.toString()
+            company_name.text.toString()
+            shoe_size.text.toString()
+            description.text.toString()
 
             findNavController().navigate(R.id.action_shoseDetailFragment_to_shoesListingsFragment)
 
