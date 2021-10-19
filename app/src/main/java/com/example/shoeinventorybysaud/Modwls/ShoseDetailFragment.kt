@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.shoeinventorybysaud.R
 import com.example.shoeinventorybysaud.databinding.FragmentShoseDetailBinding
@@ -27,7 +28,7 @@ class ShoseDetailFragment(name: String) : Fragment() {
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?): View {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?): View{
         val shoe_name = view.findViewById(R.id.shoe_name) as EditText
         val company_name = view.findViewById(R.id.company_name) as EditText
         val shoe_size = view.findViewById(R.id.shoe_size) as EditText
