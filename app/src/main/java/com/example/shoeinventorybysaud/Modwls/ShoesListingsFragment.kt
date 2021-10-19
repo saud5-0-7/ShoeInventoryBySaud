@@ -7,6 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -18,6 +19,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ShoesListingsFragment : Fragment() {
 
+    private val  shoeListingViewModel : shoeListingViewModel by activityViewModels()
 
 
     override fun onCreateView(
@@ -33,26 +35,33 @@ class ShoesListingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val fab = view.findViewById(R.id.fab) as FloatingActionButton
 
+        shoeListingViewModel.shoeList.observe(viewLifecycleOwner, {
+            val iterator = it.listIterator()
+            for (item in iterator) {
+                val _name = TextView(this.context)
+                _name.text = item.name
+                val _size = TextView(this.context)
+                _size.text = item.size
+                val _company = TextView(this.context)
+                _company.text = item.company.toString()
+                val _description = TextView(this.context)
+                _description.text = item.description
+            }
+
+        })
+
+
         fab.setOnClickListener {
             findNavController().navigate(R.id.action_shoesListingsFragment_to_shoseDetailFragment)
         }
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
 
-        val iterator = it.listIterator()
-        for (item in iterator) {
-            val _name = TextView(this.context)
-            _name.text = item.name
-            val _size = TextView(this.context)
-            _size.text = item.size
-            val _company = TextView(this.context)
-            _company.text = item.company
-            val _description = TextView(this.context)
-            _description.text = item.description
-        }
+
 
     }
 

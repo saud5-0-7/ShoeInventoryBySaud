@@ -3,7 +3,9 @@ package com.example.shoeinventorybysaud.Modwls
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ShoeListingViewModel(name: String, company: Double, size: String, description: String) : ViewModel() {
+
+class shoeListingViewModel : ViewModel(){
+
 
     val shoeList = MutableLiveData<MutableList<Shoe>>()
 
@@ -11,13 +13,16 @@ class ShoeListingViewModel(name: String, company: Double, size: String, descript
         shoeList.value = ArrayList()
     }
 
-    fun addShoe(name: String, company: String, size: Double, description: String) {
-        var shoe: Shoe = Shoe(name, company, size, description)
-        shoeList.value?.add(shoe)
-        shoeList.value = shoeList.value
 
 
+    data class Shoe(
+        var name: String = "",
+        var size: String = "",
+        var company: Double = 0.0,
+        var description: String = ""
+    )
     }
 
 
-}
+
+

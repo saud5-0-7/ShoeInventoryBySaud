@@ -6,25 +6,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.shoeinventorybysaud.R
+import com.example.shoeinventorybysaud.databinding.FragmentShoseDetailBinding
 
 
 class ShoseDetailFragment(name: String) : Fragment() {
 
-    private lateinit var binding: ShoseDetailFragment
+    private lateinit var binding: FragmentShoseDetailBinding
+    private val shoeListingViewModel: shoeListingViewModel by activityViewModels()
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_shose_detail, container, false)
+        binding = FragmentShoseDetailBinding.inflate(layoutInflater, container, false)
+        return binding.root
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?): View {
         val shoe_name = view.findViewById(R.id.shoe_name) as EditText
         val company_name = view.findViewById(R.id.company_name) as EditText
         val shoe_size = view.findViewById(R.id.shoe_size) as EditText
@@ -43,9 +46,9 @@ class ShoseDetailFragment(name: String) : Fragment() {
 
         binding.cancelButton.setOnClickListener {
 
-            binding.shoe_name.text.clear()
-            binding.company_name.text.clear()
-            binding.shoe_size.text.clear()
+            binding.shoeName.text.clear()
+            binding.companyName.text.clear()
+            binding.shoeSize.text.clear()
             binding.description.text.clear()
 
             findNavController().navigate(R.id.action_shoseDetailFragment_to_shoesListingsFragment)
@@ -54,6 +57,7 @@ class ShoseDetailFragment(name: String) : Fragment() {
 
         }
         return binding.root
+
 
     }
 
