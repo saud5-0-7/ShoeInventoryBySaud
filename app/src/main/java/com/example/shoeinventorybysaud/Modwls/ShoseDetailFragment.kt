@@ -57,7 +57,7 @@ class ShoseDetailFragment(name: String) : Fragment() {
 
 
         }
-        return binding.root
+
 
 
     }
