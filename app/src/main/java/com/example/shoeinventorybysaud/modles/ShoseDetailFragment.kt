@@ -27,7 +27,7 @@ class ShoseDetailFragment : Fragment() {
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val shoe_name = view.findViewById(R.id.shoe_name) as EditText
         val company_name = view.findViewById(R.id.company_name) as EditText
         val shoe_size = view.findViewById(R.id.shoe_size) as EditText
@@ -54,9 +54,7 @@ class ShoseDetailFragment : Fragment() {
             findNavController().navigate(R.id.action_shoseDetailFragment_to_shoesListingsFragment)
 
 
-
         }
-
 
 
     }
