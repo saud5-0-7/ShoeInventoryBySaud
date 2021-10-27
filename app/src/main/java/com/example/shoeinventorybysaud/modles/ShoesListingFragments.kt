@@ -28,7 +28,7 @@ class ShoesListingFragments : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val fab = view.findViewById(R.id.fab) as FloatingActionButton
 
-        shoeListingViewModel.shoeList.observe(viewLifecycleOwner, {
+        shoeListingViewModel.shoeList.observe(viewLifecycleOwner) {
             val iterator = it.listIterator()
             for (item in iterator) {
                 val _name = TextView(this.context)
@@ -42,7 +42,7 @@ class ShoesListingFragments : Fragment() {
 
             }
 
-        })
+        }
 
 
         fab.setOnClickListener {
@@ -77,9 +77,7 @@ class ShoesListingFragments : Fragment() {
         }
     }
 
-class shoeListingViewModel {
 
-}
 
 
 
