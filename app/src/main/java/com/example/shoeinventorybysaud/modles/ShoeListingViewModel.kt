@@ -1,10 +1,12 @@
+@file:Suppress("unused")
+
 package com.example.shoeinventorybysaud.modles
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 
-class shoeListingViewModel : ViewModel() {
+class ShoeListingViewModel: ViewModel() {
 
 
     val shoeList = MutableLiveData<MutableList<Shoe>>()

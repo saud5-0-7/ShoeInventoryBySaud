@@ -15,7 +15,7 @@ import com.example.shoeinventorybysaud.databinding.FragmentShoseDetailBinding
 class ShoseDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentShoseDetailBinding
-    private val shoeListingViewModel: shoeListingViewModel by activityViewModels()
+    private val shoeListingViewModel: ShoeListingViewModel by activityViewModels()
 
 
     override fun onCreateView(
