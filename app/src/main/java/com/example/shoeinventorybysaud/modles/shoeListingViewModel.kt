@@ -2,8 +2,6 @@ package com.example.shoeinventorybysaud.modles
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.shoeinventorybysaud.Modwls.Shoe
-import com.example.shoeinventorybysaud.modles.shoeListingViewModel
 
 
 class shoeListingViewModel : ViewModel() {

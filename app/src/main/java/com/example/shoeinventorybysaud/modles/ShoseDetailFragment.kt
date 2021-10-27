@@ -7,14 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
-import com.example.shoeinventorybysaud.modles.shoeListingViewModel
 import com.example.shoeinventorybysaud.R
 import com.example.shoeinventorybysaud.databinding.FragmentShoseDetailBinding
 
 
-class ShoseDetailFragment(name: String) : Fragment() {
+class ShoseDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentShoseDetailBinding
     private val shoeListingViewModel: shoeListingViewModel by activityViewModels()

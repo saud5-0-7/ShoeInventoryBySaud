@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/shoseDetailFragment"
-        android:name="com.example.shoeinventorybysaud.Modwls.ShoseDetailFragment"
+        android:name="com.example.shoeinventorybysaud.modles.ShoseDetailFragment"
         android:label="fragment_shose_detail"
         tools:layout="@layout/fragment_shose_detail" >
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/shoesListingsFragment"
-        android:name="com.example.shoeinventorybysaud.Modwls.ShoesListingsFragment"
+        android:name="com.example.shoeinventorybysaud.modles.ShoesListingFragments"
         android:label="ShoesListingsFragment" >
         <action
             android:id="@+id/action_shoesListingsFragment_to_shoseDetailFragment"
