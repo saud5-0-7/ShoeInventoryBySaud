@@ -1,7 +1,9 @@
-package com.example.shoeinventorybysaud.Modwls
+package com.example.shoeinventorybysaud.modles
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.shoeinventorybysaud.modles.Shoe
+import com.example.shoeinventorybysaud.modles.shoeListingViewModel
 
 
 class shoeListingViewModel : ViewModel() {
@@ -14,7 +16,7 @@ class shoeListingViewModel : ViewModel() {
     }
 
     fun addShoe(name: String, size: String, company: String, description: String) {
-        var shoe: Shoe = Shoe(name, size, company, description)
+        val shoe = Shoe(name, size, company, description)
         shoeList.value?.add(shoe)
         shoeList.value = shoeList.value
 

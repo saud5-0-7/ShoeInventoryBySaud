@@ -6,7 +6,7 @@
     <data>
         <variable
             name="ShoeListingViewModel"
-            type="com.example.shoeinventorybysaud.Modwls.shoeListingViewModel" />
+            type="com.example.shoeinventorybysaud.modles.shoeListingViewModel" />
 
     </data>
 

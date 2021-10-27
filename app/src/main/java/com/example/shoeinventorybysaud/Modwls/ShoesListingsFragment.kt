@@ -1,4 +1,4 @@
-package com.example.shoeinventorybysaud.Modwls
+package com.example.shoeinventorybysaud.modles
 
 import android.os.Bundle
 import android.view.*
@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.shoeinventorybysaud.modles.shoeListingViewModel
 import com.example.shoeinventorybysaud.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton

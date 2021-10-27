@@ -1,4 +1,4 @@
-package com.example.shoeinventorybysaud.Modwls
+package com.example.shoeinventorybysaud.modles
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import android.widget.EditText
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
+import com.example.shoeinventorybysaud.modles.shoeListingViewModel
 import com.example.shoeinventorybysaud.R
 import com.example.shoeinventorybysaud.databinding.FragmentShoseDetailBinding
 
