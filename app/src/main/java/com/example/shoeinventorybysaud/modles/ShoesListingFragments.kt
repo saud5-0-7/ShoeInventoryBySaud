@@ -12,7 +12,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ShoesListingFragments : Fragment() {
 
-    private val  shoeListingViewModel : ShoesListingFragments by activityViewModels()
+    private val  shoeListingViewModel : ShoeListingViewModel by activityViewModels()
 
 
     override fun onCreateView(
