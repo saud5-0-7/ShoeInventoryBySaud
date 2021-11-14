@@ -2,6 +2,7 @@
 package com.example.shoeinventorybysaud.modles
 
 import androidx.databinding.Bindable
+import androidx.databinding.PropertyChangeRegistry
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.shoeinventorybysaud.BR
@@ -9,7 +10,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-class ShoeListingViewModel: ViewModel(), Observable() {
+class ShoeListingViewModel: ViewModel(),Observable {
 
 
     val shoeList = MutableLiveData<MutableList<Shoe>>()
@@ -22,7 +23,7 @@ class ShoeListingViewModel: ViewModel(), Observable() {
     @Bindable
     var shoe = Shoe()
         set(value) {
-            if(value != field) {
+            if (value != field) {
                 field = value
 
                 saveData()
@@ -30,6 +31,7 @@ class ShoeListingViewModel: ViewModel(), Observable() {
                 notifyPropertyChanged(BR.ShoeListingViewModel)
             }
         }
+
 
     private fun saveData() {
         TODO("Not yet implemented")
@@ -43,7 +45,22 @@ class ShoeListingViewModel: ViewModel(), Observable() {
 
     }
 
+    private val callbacks: PropertyChangeRegistry = PropertyChangeRegistry()
+
+    override fun addOnPropertyChangedCallback(
+        callback: Observable.OnPropertyChangedCallback
+    ) {
+        callbacks.add(callback)
     }
+
+    override fun removeOnPropertyChangedCallback(
+        callback: Observable.OnPropertyChangedCallback
+    ) {
+        callbacks.remove(callback)
+    }
+}
+
+
 
 
 

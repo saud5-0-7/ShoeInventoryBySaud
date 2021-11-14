@@ -3,6 +3,8 @@ package com.example.shoeinventorybysaud.modles
 import android.os.Bundle
 import android.view.*
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -12,6 +14,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ShoesListingFragments : Fragment() {
 
+    private lateinit var binding:ShoesListingFragments
     private val  shoeListingViewModel : ShoeListingViewModel by activityViewModels()
 
 
@@ -21,8 +24,10 @@ class ShoesListingFragments : Fragment() {
     ): View? {
 
 
+        val binding: ViewDataBinding? = DataBindingUtil.setContentView(this, R.layout.fragment_shoes_listings)
 
-        return inflater.inflate(R.layout.fragment_shoes_listings,container,false)
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
