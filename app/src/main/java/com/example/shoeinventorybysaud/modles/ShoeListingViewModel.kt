@@ -28,7 +28,6 @@ class ShoeListingViewModel: ViewModel(),Observable {
 
                 saveData()
 
-                notifyPropertyChanged(BR.ShoeListingViewModel)
             }
         }
 
@@ -45,21 +44,19 @@ class ShoeListingViewModel: ViewModel(),Observable {
 
     }
 
-    private val callbacks: PropertyChangeRegistry = PropertyChangeRegistry()
 
+    private val callbacks: PropertyChangeRegistry = PropertyChangeRegistry()
     override fun addOnPropertyChangedCallback(
         callback: Observable.OnPropertyChangedCallback
     ) {
         callbacks.add(callback)
     }
-
     override fun removeOnPropertyChangedCallback(
         callback: Observable.OnPropertyChangedCallback
     ) {
         callbacks.remove(callback)
     }
 }
-
 
 
 

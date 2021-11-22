@@ -17,17 +17,13 @@ class ShoesListingFragments : Fragment() {
     private lateinit var binding:ShoesListingFragments
     private val  shoeListingViewModel : ShoeListingViewModel by activityViewModels()
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-
-        val binding: ViewDataBinding? = DataBindingUtil.setContentView(this, R.layout.fragment_shoes_listings)
-
-
-
+        val binding: ViewDataBinding? =
+            DataBindingUtil.inflate(layoutInflater, R.layout.fragment_shoes_listings, container, false)
+        return binding!!.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
