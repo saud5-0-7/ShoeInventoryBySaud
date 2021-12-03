@@ -54,7 +54,7 @@
                 <TextView
                     android:layout_width="154dp"
                     android:layout_height="wrap_content"
-                    android:text="@{ShoeListingViewModel.shoe.name}
+                    android:text="@{ShoeListingViewModel.shoe.name}"
                     android:textSize="18sp" />
 
                 <EditText
@@ -77,8 +77,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@{ShoeListingViewModel.shoe.company}
-                    android:textSize="18sp" />
+                    android:text="@{ShoeListingViewModel.shoe.company}"
+                    android:textSize="18sp"/>
 
                 <EditText
                     android:id="@+id/company_name"
@@ -101,7 +101,7 @@
                     android:layout_width="138dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@{ShoeListingViewModel.shoe.size}
+                    android:text="@{ShoeListingViewModel.shoe.size}"
                     android:textSize="18sp" />
 
                 <EditText
@@ -123,7 +123,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{ShoeListingViewModel.shoe.description}
+                    android:text="@{ShoeListingViewModel.shoe.description}"
                     android:textSize="18sp" />
 
                 <EditText
