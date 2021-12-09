@@ -2,15 +2,13 @@
 package com.example.shoeinventorybysaud.modles
 
 import androidx.databinding.Bindable
+import androidx.databinding.Observable
 import androidx.databinding.PropertyChangeRegistry
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.shoeinventorybysaud.BR
-import java.util.*
-import kotlin.collections.ArrayList
 
 
-class ShoeListingViewModel: ViewModel(),Observable {
+class ShoeListingViewModel: ViewModel(), Observable {
 
 
     val shoeList = MutableLiveData<MutableList<Shoe>>()
