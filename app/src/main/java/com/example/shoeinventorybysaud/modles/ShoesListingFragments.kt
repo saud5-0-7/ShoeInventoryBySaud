@@ -34,12 +34,17 @@ class ShoesListingFragments : Fragment() {
             for (item in iterator) {
                 val _name = TextView(this.context)
                 _name.text = item.name
+                binding.shoeList.addView(_name)
                 val _size = TextView(this.context)
                 _size.text = item.size
+                binding.shoeList.addView(_size)
                 val _company = TextView(this.context)
                 _company.text = item.company.toString()
+                binding.shoeList.addView(_company)
                 val _description = TextView(this.context)
                 _description.text = item.description
+                binding.shoeList.addView(_description)
+
 
             }
 
