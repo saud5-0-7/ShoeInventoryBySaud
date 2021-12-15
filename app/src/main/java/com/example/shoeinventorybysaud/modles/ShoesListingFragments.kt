@@ -4,26 +4,26 @@ import android.os.Bundle
 import android.view.*
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.shoeinventorybysaud.R
+import com.example.shoeinventorybysaud.databinding.FragmentShoesListingsBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class ShoesListingFragments : Fragment() {
 
-    private lateinit var binding:ShoesListingFragments
+    private lateinit var binding: FragmentShoesListingsBinding
     private val  shoeListingViewModel : ShoeListingViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: ViewDataBinding? =
+        binding =
             DataBindingUtil.inflate(layoutInflater, R.layout.fragment_shoes_listings, container, false)
-        return binding!!.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -34,7 +34,7 @@ class ShoseDetailFragment : Fragment() {
         val description = view.findViewById(R.id.description) as EditText
 
         binding.saveButton.setOnClickListener {
-            ShoeListingViewModel.addShoe(
+            shoeListingViewModel.addShoe(
             shoe_name.text.toString(),
             shoe_size.text.toString(),
             company_name.text.toString(),
